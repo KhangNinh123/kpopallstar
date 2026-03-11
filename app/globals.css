@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-body: "Avenir Next", "Noto Sans", "Segoe UI", sans-serif;
+  --font-heading: "Trebuchet MS", "Arial Narrow", sans-serif;
+  --background: #f2f4f6;
+  --surface: #ffffff;
+  --foreground: #182026;
+  --muted: #6b7280;
+  --brand: #2fd49d;
+  --brand-deep: #1ab782;
+  --line: #e5e7eb;
+  --sale: #f43f5e;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+}
+
+.home-shell {
+  min-height: 100dvh;
+  background-image:
+    radial-gradient(circle at 8% 8%, #dcfaef 0, #dcfaef 18%, transparent 19%),
+    radial-gradient(circle at 92% 12%, #edfdf7 0, #edfdf7 12%, transparent 13%);
+}
+
+.section-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 30px rgb(15 23 42 / 4%);
+}
+
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 20% 30%, rgb(255 255 255 / 35%) 0, transparent 35%),
+    radial-gradient(circle at 70% 10%, rgb(255 255 255 / 28%) 0, transparent 25%),
+    linear-gradient(135deg, #24c98e, #1ea26f);
+}
+
+.sale-pattern {
+  background-image:
+    radial-gradient(circle at 10% 18%, rgb(255 200 155 / 40%) 0, transparent 24%),
+    radial-gradient(circle at 90% 85%, rgb(255 190 110 / 26%) 0, transparent 28%),
+    linear-gradient(120deg, #7f1d1d, #b91c1c);
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)),
+    linear-gradient(90deg, #ecf1f4 1px, transparent 1px),
+    linear-gradient(#ecf1f4 1px, transparent 1px);
+  background-size: auto, 24px 24px, 24px 24px;
+}
+
+.reveal {
+  opacity: 0;
+  animation: enter 0.55s ease forwards;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
