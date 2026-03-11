@@ -1,5 +1,4 @@
-import type { CSSProperties } from "react";
-import ProductCard, { type Product, stagger } from "./components/ProductCard";
+import ProductCard, { type Product } from "./components/ProductCard";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FlashSale from "./components/FlashSale";
@@ -118,6 +117,7 @@ export default function Home() {
       <Header />
 
       <main className="mx-auto w-full max-w-[1440px] space-y-3 px-4 md:px-6 xl:px-8 mt-4">
+        <h1 className="sr-only">Lười Store – Boardgame, Bài MEME & Phụ Kiện Giá Tốt</h1>
         <section className="grid gap-4 pt-1 lg:grid-cols-[2.6fr_1fr]">
           <div className="rounded-xl overflow-hidden relative cursor-pointer group shadow-sm bg-white">
             <img
