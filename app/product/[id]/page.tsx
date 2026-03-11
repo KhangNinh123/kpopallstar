@@ -317,17 +317,17 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
 
             {/* Mobile Bottom Bar (Sticky) */}
             <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 h-14 bg-white border-t border-zinc-100 flex items-stretch">
-                <button className="w-16 flex flex-col items-center justify-center border-r border-zinc-100/50 py-1 active:bg-zinc-100 transition-colors">
-                    <svg className="w-5 h-5 text-zinc-500 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button className="w-16 flex flex-col items-center justify-center border-r border-[#ff4d94] py-1 bg-[#FF217A] text-white active:bg-[#e61d6d] transition-colors">
+                    <svg className="w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
-                    <span className="text-[10px] text-zinc-500">Chat ngay</span>
+                    <span className="text-[10px]">Chat ngay</span>
                 </button>
-                <button className="w-20 flex flex-col items-center justify-center border-r border-zinc-100/50 py-1 active:bg-zinc-100 transition-colors">
-                    <svg className="w-5 h-5 text-zinc-500 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button className="w-20 flex flex-col items-center justify-center py-1 bg-[#FF217A] text-white active:bg-[#e61d6d] transition-colors">
+                    <svg className="w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <span className="text-[10px] text-zinc-500">Giỏ hàng</span>
+                    <span className="text-[10px]">Giỏ hàng</span>
                 </button>
                 <button className="flex-1 bg-emerald-500 font-bold text-white active:bg-emerald-600 transition-colors">
                     Mua ngay
