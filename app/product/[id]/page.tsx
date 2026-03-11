@@ -176,10 +176,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                                 </div>
 
                                 <div className="hidden lg:flex gap-4 pt-4">
-                                    <button className="flex-1 h-12 bg-emerald-50 border border-emerald-500 text-emerald-600 font-medium rounded-sm flex items-center justify-center gap-2 hover:bg-emerald-100 transition-colors">
-                                        <img src="/icon/cart.png" className="w-5 h-5 opacity-80" /> Thêm Vào Giỏ Hàng
+                                    <button onClick={() => window.location.href='/cart'} className="flex-1 h-12 bg-emerald-50 border border-emerald-500 text-emerald-600 font-medium rounded-sm flex items-center justify-center gap-2 hover:bg-emerald-100 transition-colors">
+                                        <img src="/icon/cart.png" className="w-5 h-5 opacity-80" alt="Added cart" /> Thêm Vào Giỏ Hàng
                                     </button>
-                                    <button className="flex-1 h-12 bg-emerald-500 text-white font-medium rounded-sm hover:bg-emerald-600 transition-colors">
+                                    <button onClick={() => window.location.href='/checkout'} className="flex-1 h-12 bg-emerald-500 text-white font-medium rounded-sm hover:bg-emerald-600 transition-colors">
                                         Mua Ngay
                                     </button>
                                 </div>
@@ -323,13 +323,13 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     </svg>
                     <span className="text-[10px]">Chat ngay</span>
                 </button>
-                <button className="w-20 flex flex-col items-center justify-center py-1 bg-[#FF217A] text-white active:bg-[#e61d6d] transition-colors">
+                <button onClick={() => window.location.href='/cart'} className="w-20 flex flex-col items-center justify-center py-1 bg-[#FF217A] text-white active:bg-[#e61d6d] transition-colors">
                     <svg className="w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     <span className="text-[10px]">Giỏ hàng</span>
                 </button>
-                <button className="flex-1 bg-emerald-500 font-bold text-white active:bg-emerald-600 transition-colors">
+                <button onClick={() => window.location.href='/checkout'} className="flex-1 bg-emerald-500 font-bold text-white active:bg-emerald-600 transition-colors">
                     Mua ngay
                 </button>
             </div>

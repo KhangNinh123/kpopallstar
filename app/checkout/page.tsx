@@ -206,6 +206,19 @@ export default function CheckoutPage() {
             Nhấn &quot;Đặt hàng&quot; đồng nghĩa với việc bạn đồng ý tuân theo <span className="text-blue-600">Điều khoản THE KAS</span>
         </div>
 
+        {/* DESKTOP: Sticky Checkout Footer */}
+        <div className="hidden lg:flex sticky bottom-0 z-40 bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.03)] border border-zinc-100 rounded-sm mb-8 items-center justify-end px-6 py-4 mt-6">
+             <div className="flex items-center gap-4">
+                 <div className="flex items-center gap-2">
+                     <span className="text-[16px] text-zinc-800">Tổng thanh toán:</span>
+                     <span className="text-2xl font-bold text-emerald-500 ml-2">{money.format(totalPayment)}đ</span>
+                 </div>
+                 <button className="bg-emerald-500 hover:bg-emerald-600 text-white w-52 h-[44px] rounded-sm font-medium text-[16px] transition-colors shadow shadow-emerald-500/20 ml-4">
+                     Đặt hàng
+                 </button>
+             </div>
+        </div>
+
       </main>
 
       {/* Desktop Footer Placeholder */}
